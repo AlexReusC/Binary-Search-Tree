@@ -3,7 +3,10 @@
 
 #include "inserta.h"
 #include "traversal.h"
-#include "heigth.h"
+#include "height.h"
+#include "whatlevelamI.h"
+#include "ancestors.h"
+#include "eliminate.h"
 #include "Node.h"
 
 using namespace std;
@@ -13,11 +16,9 @@ int main(){
   Node *head = NULL;
   int n = 0, dato = 0;
   cin >> n;
-  // vector<int> arr={7, 89, 67, 3, 6};
 
   for(int i = 0; i < n; i++){
     cin >> dato;
-    // insert(arr[i], &head);
     insert(dato, &head);
   }
   cout << "Por Preorden: ";
@@ -29,11 +30,19 @@ int main(){
   cout << endl << "Por Nivel: ";
   traversal(head,4);
   cout << endl << "La altura es: " << height(head) << endl;
-  /*
-  cout << head->data << endl;
-  cout << head->left->data << endl;
-  cout << head->left->right->data << endl;
-  cout << head->right->data << endl;
-  cout << head->left->left->data << endl;
-  */
+
+  // ancestors(head, 5);
+  // ancestors(head, 31);
+  // ancestors(head, 9);
+  //
+  // whatlevelamI(head, 4);
+  // whatlevelamI(head, 9);
+  // whatlevelamI(head, 31);
+
+  eliminate(&head,71);
+  cout << head->right->data;
+  cout << endl << "Por Nivel: ";
+  //cout << head->right->right->left;
+  traversal(head,4);
+
 }

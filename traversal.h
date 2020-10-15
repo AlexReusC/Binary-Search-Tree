@@ -52,12 +52,6 @@ void traversal(Node *tmp, int flag){
         cola.push(tmp2->right);
       }
     }
-    /*
-    int altura = height(tmp);
-    for (int i = 1; i < altura+1; i++){
-      levelnodes(tmp, i);
-    }
-    */
   }
 }
 
