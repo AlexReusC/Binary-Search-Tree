@@ -21,28 +21,39 @@ int main(){
     cin >> dato;
     insert(dato, &head);
   }
-  cout << "Por Preorden: ";
+
+  int m = 0, datoDelete = 0;
+  cin >> m;
+
+  for (int i = 0; i < m; i++) {
+    cin >> datoDelete;
+    eliminate(&head, datoDelete);
+  }
+
   traversal(head,1);
-  cout << endl << "Por Inorden: ";
+  cout << endl;
   traversal(head,2);
-  cout << endl << "Por Postorden: ";
+  cout << endl;
   traversal(head,3);
-  cout << endl << "Por Nivel: ";
+  cout << endl;
   traversal(head,4);
-  cout << endl << "La altura es: " << height(head) << endl;
+  cout << endl << height(head) << endl;
 
-  // ancestors(head, 5);
-  // ancestors(head, 31);
-  // ancestors(head, 9);
-  //
-  // whatlevelamI(head, 4);
-  // whatlevelamI(head, 9);
-  // whatlevelamI(head, 31);
+  int q = 0, datoAncestors = 0;
+  cin >> q;
 
-  eliminate(&head,71);
-  cout << head->right->data;
-  cout << endl << "Por Nivel: ";
-  //cout << head->right->right->left;
-  traversal(head,4);
+  for (int i = 0; i < q; i++) {
+    cin >> datoAncestors;
+    ancestors(head, datoAncestors);
+  }
 
+  int r = 0, datoLevel = 0;
+  cin >> r;
+
+  for (int i = 0; i < r; i++) {
+    cin >> datoLevel;
+    whatlevelamI(head, datoLevel);
+  }
+
+  return 0;
 }

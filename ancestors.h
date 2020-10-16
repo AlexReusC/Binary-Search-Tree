@@ -11,14 +11,6 @@ void ancestors(Node *trav, int data){
     return;
   }
 
-  //***change***
-
-  /*
-  if(trav->data == data){
-    std::cout << "smth";
-  }
-  */
-
 
   while(true){
     if(trav->data == data){
@@ -39,7 +31,7 @@ void ancestors(Node *trav, int data){
       trav = trav->left;
     }
     else if( ( trav->data < data && trav->right == NULL ) || ( trav->data > data && trav->left == NULL ) ){
-      std::cout << "-1" << std::endl;
+      std::cout << std::endl;
       return;
     }
 

@@ -77,23 +77,30 @@ void eliminate(Node **h, int data){
         }
 
         if (trav->left == NULL && trav->right == NULL) {
-          if (ant != *h){
+          if(ant->right == tmp || ant->left == tmp){
             tmp->data = trav->data;
             delete(trav);
-            ant->left = NULL;
+            tmp->right = NULL;
           }
           else{
             tmp->data = trav->data;
             delete(trav);
-            tmp->right = NULL;
+            ant->left =   NULL;
           }
           return;
         }
 
         if(trav->right != NULL){ //there's smth to the right
-          ant->left = trav->right;
-          tmp->data = trav->data;
-          delete(trav);
+          if(ant->right == tmp || ant->left == tmp){
+            tmp->data = trav->data;
+            tmp->right = trav->right;
+            delete(trav);
+          }
+          else {
+            ant->left = trav->right;
+            tmp->data = trav->data;
+            delete(trav);
+          }
           return;
         }
         else if(trav->right == NULL){ //it's a leaf
@@ -118,6 +125,10 @@ void eliminate(Node **h, int data){
       ant = trav;
       trav = trav->left;
       flag = 2;
+    }
+
+    else{
+      return;
     }
   }
 
