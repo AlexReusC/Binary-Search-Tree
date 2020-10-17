@@ -45,6 +45,7 @@ int main(){
   for (int i = 0; i < q; i++) {
     cin >> datoAncestors;
     ancestors(head, datoAncestors);
+    cout << endl;
   }
 
   int r = 0, datoLevel = 0;
@@ -53,6 +54,7 @@ int main(){
   for (int i = 0; i < r; i++) {
     cin >> datoLevel;
     whatlevelamI(head, datoLevel);
+    cout << endl;
   }
 
   return 0;

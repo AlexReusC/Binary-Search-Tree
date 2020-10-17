@@ -3,6 +3,7 @@
 
 void whatlevelamI(Node *trav, int data){
   if(trav == NULL){
+    std::cout << "-1";
     return;
   }
 
@@ -10,7 +11,7 @@ void whatlevelamI(Node *trav, int data){
 
   while(true){
     if(trav->data == data){
-      std::cout << cont << std::endl;
+      std::cout << cont;
       return;
     }
     else if(trav->data < data && trav->right != NULL){
@@ -22,7 +23,7 @@ void whatlevelamI(Node *trav, int data){
       trav = trav->left;
     }
     else if( ( trav->data < data && trav->right == NULL ) || ( trav->data > data && trav->left == NULL ) ){
-      std::cout << "-1" << std::endl;
+      std::cout << "-1";
       return;
     }
 

@@ -19,7 +19,7 @@ void ancestors(Node *trav, int data){
         std::cout << cola.front() << " ";
         cola.pop();
       }
-      std::cout << std::endl;
+      //std::cout << std::endl;
       return;
     }
     else if(trav->data < data && trav->right != NULL){
@@ -31,7 +31,7 @@ void ancestors(Node *trav, int data){
       trav = trav->left;
     }
     else if( ( trav->data < data && trav->right == NULL ) || ( trav->data > data && trav->left == NULL ) ){
-      std::cout << std::endl;
+      //std::cout << std::endl;
       return;
     }
 
