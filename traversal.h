@@ -4,6 +4,15 @@
 #include <queue>
 #include "Node.h"
 
+/*
+Complejidad: O(n)
+Función que te imprime el traversal
+por medio de preorder, inorder, postorder
+o por niveles
+Recibe un entero y un apuntador de nodo,
+regresa un void
+*/
+
 
 void traversal(Node *tmp, int flag){
   if(tmp == NULL){

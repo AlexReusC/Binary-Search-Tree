@@ -3,6 +3,13 @@
 
 #include "Node.h"
 
+/*
+Complejidad: O(n)
+Funcion que te indica el numero de niveles
+del árbol. Recibe un apuntador a nodo y regresa
+un entero
+*/
+
 int height(Node* tmp){
   if (tmp == NULL){
     return 0;

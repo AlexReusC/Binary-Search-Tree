@@ -3,6 +3,13 @@
 
 #include "Node.h"
 
+/*
+Complejidad: O(logn)
+Funcion que sirve para insertar un nuevo nodo
+en su lugar correcto. Regresa void y recibe un entero
+y un apuntador a apuntador de Node
+*/
+
 void insert(int data, Node **h){
   Node* trav = *h;
   Node* tmp = new Node;

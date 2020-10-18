@@ -1,6 +1,13 @@
 #ifndef WHATLEVELAMI_H
 #define WHATLEVELAMI_H
 
+
+/*
+Complejidad: O(logn)
+Funcion que te dice en que nivel esta
+el nodo indicado. No regresa nada,
+recibe un apuntador a nodo y un entero
+*/
 void whatlevelamI(Node *trav, int data){
   if(trav == NULL){
     std::cout << "-1";

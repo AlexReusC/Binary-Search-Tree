@@ -3,6 +3,13 @@
 
 #include <queue>
 
+/*
+Complejidad: O(logn)
+Funcion que te indica cuales son los nodos
+para llegar al nodo que indiques. Regresa nada
+y recibe un entero y un apuntador de nodo
+*/
+
 void ancestors(Node *trav, int data){
 
   std::queue<int> cola;

@@ -1,6 +1,13 @@
 #ifndef ELIMINATE_H
 #define ELIMINATE_H
 
+/*
+Complejidad: O(logn)
+Funcion que sirve para eliminar un nodo
+Regresa void y recibe un entero
+y un apuntador a apuntador de Node
+*/
+
 void eliminate(Node **h, int data){
   if(*h == NULL){
     return;

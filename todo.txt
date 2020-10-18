@@ -1,0 +1,9 @@
+eliminate =
+
++eliminar hojas (nodos con right==null && left==null)
+-eliminar padres con solo un NULL
++eliminar padres con los dos hijos
++eliminar a la mitad con un null
++eliminar a la mitad con dos hijos
+  +minimo mayor sin hijos
+  +minimo mayor con hijo
